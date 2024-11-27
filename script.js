@@ -63,8 +63,9 @@ canvas.addEventListener('mousemove', (e) => {
     const accuracy = calculateAccuracy(points);
     accuracyDisplay.textContent = `${accuracy.toFixed(1)}%`;
 
-    if (accuracy >= 90) document.body.style.backgroundColor = '';
-    else document.body.style.backgroundColor = 'black';
+    if (accuracy >= 90) accuracyDisplay.style.color = 'green';
+    else if (accuracy >= 80) accuracyDisplay.style.color = 'yellow';
+    else accuracyDisplay.style.color = 'red';
 });
 
 canvas.addEventListener('mouseup', () => {
