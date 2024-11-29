@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draw a Perfect Circle!</title>
+    <title>Draw a perfect circle!</title>
     <style>
         body {
             margin: 0;
@@ -34,16 +34,34 @@
             font-size: 20px;
             color: white;
         }
+        #switch-mode {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
         canvas {
             display: block;
         }
     </style>
 </head>
 <body>
-    <div id="header">Draw a Perfect Circle!</div>
+    <div id="header">Draw a perfect circle!</div>
     <div id="accuracy">XX.x%</div>
     <div id="tagline">Draw a full circle</div>
+    <button id="switch-mode">Switch to Square</button>
     <canvas></canvas>
+    <script>
+        document.getElementById('switch-mode').addEventListener('click', () => {
+            window.location.href = 'square.html';
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

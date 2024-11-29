@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw a perfect square!</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        #header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+        }
+        #accuracy {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            color: red;
+        }
+        #tagline {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: white;
+        }
+        #controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .control-button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">Draw a perfect square!</div>
+    <div id="accuracy">XX.x%</div>
+    <div id="tagline">Draw a perfect square</div>
+    <div id="controls">
+        <button class="control-button" id="toggle-grid">Disable Gridlines</button>
+        <button class="control-button" id="toggle-guide">Disable Guide Square</button>
+        <button class="control-button" id="switch-mode">Switch to Circle</button>
+    </div>
+    <canvas></canvas>
+    <script>
+        document.getElementById('switch-mode').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+    <script src="square.js"></script>
+</body>
+</html>
