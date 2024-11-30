@@ -113,7 +113,7 @@ function draw() {
 
         ctx.strokeStyle = 'red';
         const accuracy = calculateSquareAccuracy(points);
-        if (accuracy >= 95) ctx.strokeStyle = 'green';
+        if (accuracy >= 90) ctx.strokeStyle = 'green';
         else if (accuracy >= 80) ctx.strokeStyle = 'yellow';
 
         ctx.lineWidth = 5;
@@ -138,7 +138,6 @@ canvas.addEventListener('mousemove', (e) => {
 
     if (accuracy >= 90) {
         accuracyDisplay.style.color = 'green';
-        document.body.style.backgroundColor = 'purple';
     } else {
         accuracyDisplay.style.color = 'red';
         document.body.style.backgroundColor = 'black';
